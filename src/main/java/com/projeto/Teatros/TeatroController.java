@@ -30,7 +30,7 @@ public class TeatroController {
         return teatroService.AcharMissaoID(id);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public TeatroDTO atualizarTeatro(@Valid Long id, @RequestBody TeatroDTO teatroAtualizado) {
         return teatroService.alterarTeatro(id, teatroAtualizado);
     }

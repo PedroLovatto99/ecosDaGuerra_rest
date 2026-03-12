@@ -1,5 +1,4 @@
 CREATE TABLE teatros(
-    id serial PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
  )
-

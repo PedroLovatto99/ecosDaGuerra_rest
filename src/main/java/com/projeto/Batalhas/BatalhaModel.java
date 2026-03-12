@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -18,19 +19,22 @@ public class BatalhaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, length = 100)
     private String nome;
 
-    private Date dataInicio;
+    @Column(nullable = false)
+    private LocalDate dataInicio;
 
-    private Date dataFim;
+    @Column(nullable = false)
+    private LocalDate dataFim;
 
     @ManyToOne
     @JoinColumn(name = "teatro_id")
     private TeatroModel teatro;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private BatalhaResultado resultado;
-
 
 
 

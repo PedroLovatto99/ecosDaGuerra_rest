@@ -31,11 +31,11 @@ public class TeatroController {
     }
 
     @PutMapping("/{id}")
-    public TeatroDTO atualizarTeatro(@Valid Long id, @RequestBody TeatroDTO teatroAtualizado) {
+    public TeatroDTO atualizarTeatro(@PathVariable Long id, @RequestBody @Valid TeatroDTO teatroAtualizado) {
         return teatroService.alterarTeatro(id, teatroAtualizado);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deletarTeatro(@PathVariable Long id) {
         teatroService.deletarTeatro(id);
     }

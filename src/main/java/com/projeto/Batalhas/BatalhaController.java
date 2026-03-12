@@ -1,11 +1,11 @@
 package com.projeto.Batalhas;
 
-import org.springframework.stereotype.Controller;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/batalhas")
 public class BatalhaController {
 
@@ -21,7 +21,7 @@ public class BatalhaController {
     }
 
     @PostMapping
-    public BatalhaDTO criarBatalha(@RequestBody BatalhaDTO batalhaDTO) {
+    public BatalhaDTO criarBatalha(@Valid @RequestBody BatalhaDTO batalhaDTO) {
         return batalhaService.criarBatalhas(batalhaDTO);
     }
 
@@ -31,7 +31,7 @@ public class BatalhaController {
     }
 
     @PutMapping("/{id}")
-    public BatalhaDTO atualizarBatalha(@RequestBody BatalhaDTO batalha, @PathVariable Long id) {
+    public BatalhaDTO atualizarBatalha(@Valid @RequestBody BatalhaDTO batalha, @PathVariable Long id) {
         return batalhaService.atualizarBatalha(batalha, id);
     }
 

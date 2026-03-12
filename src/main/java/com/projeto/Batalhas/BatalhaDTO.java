@@ -1,5 +1,6 @@
 package com.projeto.Batalhas;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projeto.Teatros.TeatroModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.AssertTrue;
@@ -35,8 +36,9 @@ public class BatalhaDTO {
     private BatalhaResultado resultado;
 
 
+    @JsonIgnore
     @AssertTrue(message = "A data de fim não pode ser anterior à data de início")
-    public boolean dataFimValida() {
+    public boolean isDataFimValida() {
 
         if (dataInicio == null || dataFim == null) {
             return true;

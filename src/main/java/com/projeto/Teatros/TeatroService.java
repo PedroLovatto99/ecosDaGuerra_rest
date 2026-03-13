@@ -32,7 +32,7 @@ public class TeatroService {
         return teatroMapper.toDTO(teatro);
     }
 
-    public TeatroDTO AcharMissaoID(Long id) {
+    public TeatroDTO AcharTeatroID(Long id) {
         Optional<TeatroModel> teatroPorID = teatroRepo.findById(id);
         return teatroPorID.map(teatroMapper::toDTO).orElse(null);
     }

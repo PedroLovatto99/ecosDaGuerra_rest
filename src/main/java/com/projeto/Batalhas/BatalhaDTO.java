@@ -1,6 +1,7 @@
 package com.projeto.Batalhas;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.projeto.Teatros.TeatroModel;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.AssertTrue;
@@ -18,6 +19,9 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BatalhaDTO {
+
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private Long id;
 
     @NotBlank
     @Size(max = 100)

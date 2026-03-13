@@ -29,6 +29,7 @@ public class BatalhaMapper {
 
         BatalhaDTO batalhaDTO = new BatalhaDTO();
 
+        batalhaDTO.setId(batalhaModel.getId());
         batalhaDTO.setNome(batalhaModel.getNome());
         batalhaDTO.setDataInicio(batalhaModel.getDataInicio());
         batalhaDTO.setDataFim(batalhaModel.getDataFim());

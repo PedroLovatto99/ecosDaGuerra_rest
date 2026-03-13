@@ -19,6 +19,7 @@ public class TeatroMapper {
 
         TeatroDTO teatroDTO = new TeatroDTO();
 
+        teatroDTO.setId(teatroModel.getId());
         teatroDTO.setNome(teatroModel.getNome());
 
         return teatroDTO;

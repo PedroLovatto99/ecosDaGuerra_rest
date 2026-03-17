@@ -1,6 +1,6 @@
 # 🎖️ Ecos da Guerra - API REST
 
-Uma API RESTful desenvolvida em **Java 21** e **Spring Boot** para gerenciar e catalogar informações sobre Teatros de Operações e Batalhas da Segunda Guerra Mundial. 
+Uma API REST desenvolvida em **Java 21** e **Spring Boot** para gerenciar e catalogar informações sobre Teatros de Operações e Batalhas da Segunda Guerra Mundial. 
 
 > 💡 **Objetivo:** Este é um **projeto inicial de estudo e prática**, focado em consolidar conhecimentos fundamentais de desenvolvimento backend com o ecossistema Spring, incluindo persistência de dados, relacionamentos, validações, migrations e estratégias de cache.
 
